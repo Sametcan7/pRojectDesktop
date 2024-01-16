@@ -1,0 +1,412 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.desktop {
+  background-image: url(/wallpapers/wallpaper1.svg);
+}
+
+.testdiv {
+  width: 5rem;
+}
+
+.desktop {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 8rem);
+  grid-template-rows: repeat(auto-fill, 8rem);
+  grid-auto-flow: column;
+  width: 100vw;
+  height: 95vh;
+  position: fixed;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: 8rem;
+  grid-template-rows: 6rem 2rem;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.box__folder--icon {
+  height: 5rem;
+  width: 5rem;
+  margin: auto;
+}
+.box__folder--name {
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  color: white;
+  text-shadow: 1px 1px 5px #000000;
+  font-size: 1.4rem;
+  margin: auto;
+  text-align: center;
+}
+.box__folder--input {
+  resize: none;
+  box-sizing: border-box;
+  outline: none;
+  margin: auto;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  z-index: 1;
+  font-size: 1.4rem;
+  text-align: center;
+}
+.box:hover {
+  border: 1px rgb(8, 201, 201) solid;
+  background-color: rgba(0, 255, 255, 0.2);
+  cursor: default;
+}
+.box:hover:active {
+  background-color: rgba(0, 255, 255, 0.3);
+}
+
+.taskbar {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  bottom: 0;
+  justify-content: space-between;
+  background-color: rgb(49, 16, 16);
+  z-index: 1;
+}
+
+.task {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.task--container {
+  display: flex;
+  height: 100%;
+  width: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+.task--container:hover {
+  background-color: rgba(136, 125, 125, 0.3);
+}
+.task--container:hover:active {
+  background-color: rgba(136, 125, 125, 0.2);
+}
+.task--icon {
+  width: 4rem;
+}
+.task--icon--start {
+  width: 2rem;
+}
+
+.tool {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.tool--container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+}
+.tool--container:hover {
+  background-color: rgba(136, 125, 125, 0.3);
+}
+.tool--container:hover:active {
+  background-color: rgba(136, 125, 125, 0.2);
+}
+.tool--icon {
+  height: 2rem;
+  filter: invert(100);
+}
+.tool--clock {
+  display: flex;
+  align-items: center;
+  color: white;
+  height: 100%;
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.tool--clock:hover {
+  background-color: rgba(136, 125, 125, 0.3);
+}
+.tool--clock:hover:active {
+  background-color: rgba(136, 125, 125, 0.2);
+}
+.tool--tiny {
+  border-left: 1px solid rgba(255, 255, 255, 0.555);
+  padding-right: 0.4rem;
+  height: 100%;
+}
+.tool--tiny:hover {
+  background-color: rgba(136, 125, 125, 0.3);
+}
+.tool--tiny:hover:active {
+  background-color: rgba(136, 125, 125, 0.2);
+}
+
+.start {
+  display: flex;
+  position: fixed;
+  bottom: 5vh;
+  color: white;
+  background-color: rgb(65, 63, 63);
+  height: 400px;
+  width: 350px;
+}
+.start__menu--icons {
+  display: flex;
+  width: 15%;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-right: 1px cadetblue solid;
+}
+.start__menu--icons--container {
+  display: flex;
+  height: 5rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.start__menu--icons--container:hover {
+  background-color: rgba(136, 125, 125, 0.3);
+}
+.start__menu--icons--container--icon {
+  height: 2rem;
+  filter: invert(1);
+}
+.start__menu--lists {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+}
+.start__menu--lists--folder {
+  height: 4rem;
+  padding-top: 2rem;
+  padding-left: 1rem;
+}
+.start__menu--lists--folder:hover {
+  background-color: rgba(136, 125, 125, 0.3);
+}
+
+.rightClick {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  color: black;
+  background-color: rgb(220, 220, 220);
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.555);
+  width: 20rem;
+  height: max-content;
+  cursor: default;
+  z-index: 1;
+}
+.rightClick--span {
+  box-sizing: border-box;
+  height: 3rem;
+  padding-top: 0.5rem;
+  padding-left: 2.5rem;
+}
+.rightClick--span--line {
+  width: 90%;
+}
+.rightClick--span--new {
+  position: relative;
+}
+.rightClick--span--new:hover .rightClick--new {
+  visibility: visible;
+}
+.rightClick--span--arrow {
+  width: 1.5rem;
+  position: absolute;
+  right: 3%;
+  top: 25%;
+}
+.rightClick--span:hover {
+  background-color: white;
+}
+
+.rightClick--new {
+  visibility: hidden;
+  position: absolute;
+  top: 1%;
+  left: 100%;
+  color: black;
+  background-color: rgb(220, 220, 220);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.555);
+  width: 20rem;
+}
+.rightClick--new--popup {
+  display: flex;
+  box-sizing: border-box;
+  height: 3rem;
+  align-items: center;
+}
+.rightClick--new--popup:hover {
+  background-color: white;
+}
+.rightClick--new--popup--icon {
+  width: 2rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+
+.folderRightClick {
+  display: none;
+  flex-direction: column;
+  color: black;
+  background-color: rgb(220, 220, 220);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.555);
+  width: 20rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  cursor: default;
+  z-index: 1;
+}
+.folderRightClick--span {
+  box-sizing: border-box;
+  height: 3rem;
+  padding-top: 0.5rem;
+  padding-left: 2.5rem;
+}
+.folderRightClick--span:hover {
+  background-color: white;
+}
+.folderRightClick--line {
+  box-sizing: border-box;
+  padding: 0;
+  height: min-content;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.b1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.b2 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.b3 {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.fileExplorer {
+  background-color: white;
+  height: 40rem;
+  width: 70rem;
+  position: relative;
+  left: 20%;
+  box-shadow: 1px 1px 3px black, -1px -1px 3px black;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.navigationPane {
+  background-color: rgb(140, 140, 194);
+  width: 20%;
+  height: 80%;
+  left: 0%;
+  resize: both;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-folder {
+  height: 10%;
+}
+
+.folder-files {
+  background-color: rgb(201, 198, 198);
+  width: 80%;
+  position: absolute;
+  right: 0%;
+  top: 10%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 8rem);
+  grid-template-rows: repeat(auto-fill, 8rem);
+}
+
+.nameNbuttons {
+  display: flex;
+  background-color: white;
+  width: 100%;
+  height: 10%;
+  position: relative;
+  align-items: center;
+}
+
+.fileExplorer-name {
+  position: absolute;
+  left: 50%;
+}
+
+.fileExplorer-icons-container {
+  display: flex;
+  right: 1%;
+  position: absolute;
+  height: 100%;
+  align-items: center;
+  width: 15%;
+}
+
+.fileExplorer-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  width: 80%;
+}
+
+.fileExplorer-icons {
+  height: 2.5rem;
+}
+
+.fileExplorer-icon:hover {
+  background-color: rgba(128, 128, 128, 0.438);
+}
+
+.x:hover {
+  background-color: red;
+}
+
+.hidden {
+  display: none;
+}
+
+.specified {
+  background-color: rgba(0, 255, 255, 0.3);
+}
+
+/*# sourceMappingURL=output.css.map */

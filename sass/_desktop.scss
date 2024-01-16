@@ -1,0 +1,437 @@
+///////////////////////////
+//////// Desktop //////////
+
+.testdiv {
+  width: 5rem;
+}
+
+.desktop {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 8rem);
+  grid-template-rows: repeat(auto-fill, 8rem);
+  grid-auto-flow: column;
+  width: 100vw;
+  height: 95vh;
+  position: fixed;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: 8rem;
+  grid-template-rows: 6rem 2rem;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+
+  &__folder--icon {
+    height: 5rem;
+    width: 5rem;
+    margin: auto;
+  }
+
+  &__folder--name {
+    display: inline-block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    color: white;
+    text-shadow: 1px 1px 5px #000000;
+    font-size: 1.4rem;
+    margin: auto;
+    text-align: center;
+  }
+  &__folder--input {
+    resize: none;
+    box-sizing: border-box;
+    outline: none;
+    margin: auto;
+    // z-index: 1;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    z-index: 1;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  &:hover {
+    border: 1px rgb(8, 201, 201) solid;
+    background-color: rgb(0, 255, 255, 0.2);
+    cursor: default;
+    &:active {
+      background-color: rgb(0, 255, 255, 0.3);
+    }
+  }
+}
+
+///////////////////////////
+//////// Taskbar //////////
+///////////////////////////
+
+.taskbar {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  bottom: 0;
+  justify-content: space-between;
+  background-color: rgb(49, 16, 16);
+  z-index: 1;
+}
+
+.task {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  &--container {
+    display: flex;
+    height: 100%;
+    width: 5rem;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      background-color: rgb(136, 125, 125, 0.3);
+      &:active {
+        background-color: rgba(136, 125, 125, 0.2);
+      }
+    }
+  }
+
+  &--icon {
+    width: 4rem;
+  }
+
+  &--icon--start {
+    width: 2rem;
+  }
+}
+
+/////////////////////////
+//////// Tools //////////
+/////////////////////////
+.tool {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  &--container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    &:hover {
+      background-color: rgb(136, 125, 125, 0.3);
+      &:active {
+        background-color: rgba(136, 125, 125, 0.2);
+      }
+    }
+  }
+  &--icon {
+    height: 2rem;
+    filter: invert(100);
+  }
+  &--clock {
+    display: flex;
+    align-items: center;
+    color: white;
+    height: 100%;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    &:hover {
+      background-color: rgb(136, 125, 125, 0.3);
+      &:active {
+        background-color: rgba(136, 125, 125, 0.2);
+      }
+    }
+  }
+  &--tiny {
+    border-left: 1px solid rgba(255, 255, 255, 0.555);
+    padding-right: 0.4rem;
+    height: 100%;
+    &:hover {
+      background-color: rgb(136, 125, 125, 0.3);
+      &:active {
+        background-color: rgba(136, 125, 125, 0.2);
+      }
+    }
+  }
+}
+
+//////////////////////////////
+//////// Start Menu //////////
+//////////////////////////////
+
+.start {
+  display: flex;
+  position: fixed;
+  bottom: 5vh;
+  color: white;
+  background-color: rgb(65, 63, 63);
+  height: 400px;
+  width: 350px;
+
+  &__menu--icons {
+    display: flex;
+    width: 15%;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-right: 1px cadetblue solid;
+
+    &--container {
+      display: flex;
+      height: 5rem;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      &:hover {
+        background-color: rgba(136, 125, 125, 0.3);
+      }
+
+      &--icon {
+        height: 2rem;
+        filter: invert(1);
+      }
+    }
+  }
+
+  &__menu--lists {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    &--folder {
+      height: 4rem;
+      padding-top: 2rem;
+      padding-left: 1rem;
+     &:hover {
+      background-color: rgba(136, 125, 125, 0.3);
+     }
+    }
+  }
+}
+
+/////////////////////////
+////// Right Click //////
+/////////////////////////
+
+.rightClick {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  color: black;
+  background-color: rgb(220, 220, 220);
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.555);
+  width: 20rem;
+  height: max-content;
+  cursor: default;
+  z-index: 1;
+
+  &--span {
+    box-sizing: border-box;
+    height: 3rem;
+    padding-top: 0.5rem;
+    padding-left: 2.5rem;
+
+    &--line {
+      width: 90%;
+    }
+
+    &--new {
+      position: relative;
+
+      &:hover {
+        .rightClick--new {
+          visibility: visible;
+        }
+      }
+    }
+
+    &--arrow {
+      width: 1.5rem;
+      position: absolute;
+      right: 3%;
+      top: 25%;
+    }
+
+    &:hover {
+      background-color: white;
+    }
+  }
+}
+
+//Right Click New
+
+.rightClick--new {
+  visibility: hidden;
+  position: absolute;
+  top: 1%;
+  left: 100%;
+  color: black;
+  background-color: rgb(220, 220, 220);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.555);
+  width: 20rem;
+
+  &--popup {
+    display: flex;
+    box-sizing: border-box;
+    height: 3rem;
+    align-items: center;
+
+    &:hover {
+      background-color: white;
+    }
+
+    &--icon {
+      width: 2rem;
+      padding-left: 0.4rem;
+      padding-right: 0.4rem;
+    }
+  }
+}
+
+//////////////////////////////
+///// Folder Right Click /////
+//////////////////////////////
+
+.folderRightClick {
+  display: none;
+  flex-direction: column;
+  color: black;
+  background-color: rgb(220, 220, 220);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.555);
+  width: 20rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  cursor: default;
+  z-index: 1;
+
+  &--span {
+    box-sizing: border-box;
+    height: 3rem;
+    padding-top: 0.5rem;
+    padding-left: 2.5rem;
+
+    &:hover {
+      background-color: white;
+    }
+  }
+
+  &--line {
+    box-sizing: border-box;
+    padding: 0;
+    height: min-content;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.b1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+.b2 {
+  grid-column: 1;
+  grid-row: 2;
+}
+.b3 {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+
+
+.fileExplorer {
+  background-color: white;
+  height: 40rem;
+  width: 70rem;
+  position: relative;
+  left: 20%;
+  box-shadow: 1px 1px 3px black, -1px -1px 3px black;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.navigationPane {
+  background-color: rgb(140, 140, 194);
+  width: 20%;
+  height: 80%;
+  left: 0%;
+  resize: both;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-folder {
+  height: 10%;
+}
+
+.folder-files {
+  background-color: rgb(201, 198, 198);
+  width: 80%;
+  position: absolute;
+  right: 0%;
+  top: 10%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 8rem);
+  grid-template-rows: repeat(auto-fill, 8rem);
+}
+
+.nameNbuttons {
+  display: flex;
+  background-color: white;
+  width: 100%;
+  height: 10%;
+  position: relative;
+  align-items: center;
+}
+
+.fileExplorer-name {
+  position: absolute;
+  left: 50%;
+}
+
+.fileExplorer-icons-container {
+  display: flex;
+  right: 1%;
+  position: absolute;
+  height: 100%;
+  align-items: center;
+  width: 15%;
+}
+
+.fileExplorer-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  width: 80%;
+}
+.fileExplorer-icons {
+  height: 2.5rem;
+}
+
+.fileExplorer-icon:hover {
+  background-color: rgba(128, 128, 128, 0.438);
+}
+
+.x:hover {
+  background-color: red;
+}
+
+
+///////////////////////////////////////////////////////////////////////////
+.hidden {
+  display: none;
+}
+.specified {
+  background-color: rgb(0, 255, 255, 0.3);
+}

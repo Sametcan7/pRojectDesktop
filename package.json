@@ -1,0 +1,11 @@
+{
+  "name": "projectdesktop",
+  "version": "1.0.0",
+  "description": "Desktop Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Samet Can AKCAALAN",
+  "license": "ISC"
+}

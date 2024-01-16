@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desktop</title>
+    <link rel="stylesheet" href="css/output.css" />
+  </head>
+
+  <body>
+    <!-- Desktop Section -->
+
+    <section class="desktop">
+      <div class="box b1">
+        <img class="box__folder--icon" src="icons/folder.svg" alt="Folder" />
+        <span class="box__folder--name">Samet</span>
+        <textarea class="box__folder--input hidden" rows="1">Samet</textarea>
+      </div>
+
+      <div class="box b2">
+        <img class="box__folder--icon" src="icons/folder.svg" alt="Folder" />
+
+        <span class="box__folder--name">Desktop</span>
+        <textarea class="box__folder--input hidden" rows="1">Desktop</textarea>
+      </div>
+
+      <div class="box b3">
+        <img class="box__folder--icon" src="icons/folder.svg" alt="Folder" />
+
+        <span class="box__folder--name">Hello</span>
+        <textarea class="box__folder--input hidden" rows="1">Hello</textarea>
+      </div>
+    </section>
+
+    <!-- Taskbar Section -->
+
+    <section class="taskbar">
+      <!-- Start Menu Section -->
+
+      <div class="task">
+        <div class="task--container o-start">
+          <img
+            class="task--icon--start"
+            src="icons/start.svg"
+            alt="Start Icon"
+          />
+        </div>
+        <div class="task--container">
+          <img
+            class="task--icon"
+            src="icons/google-search.svg"
+            alt="Google Icon"
+          />
+        </div>
+        <div class="task--container">
+          <img class="task--icon" src="icons/folder.svg" alt="Folder Icon" />
+        </div>
+      </div>
+
+      <!-- Tools Section -->
+
+      <div class="tool">
+        <div class="tool--container">
+          <img class="tool--icon" src="icons/network.svg" alt="network Icon" />
+        </div>
+        <div class="tool--container">
+          <img class="tool--icon" src="icons/sound.svg" alt="Sound Icon" />
+        </div>
+        <div class="tool--clock">
+          21:04 <br />
+          29.09.2023
+        </div>
+        <div class="tool--container">
+          <img class="tool--icon" src="icons/message.svg" alt="Message Icon" />
+        </div>
+        <div class="tool--tiny"></div>
+      </div>
+    </section>
+
+    <!-- Start Menu Section -->
+
+    <section class="start hidden">
+      <div class="start__menu--icons">
+        <div class="start__menu--icons--container select">
+          <img
+            class="start__menu--icons--container--icon"
+            src="icons/settings.svg"
+            alt="Settings Icon"
+          />
+        </div>
+        <div class="start__menu--icons--container select">
+          <img
+            class="start__menu--icons--container--icon"
+            src="icons/on-off.svg"
+            alt="On/Off Icon"
+          />
+        </div>
+      </div>
+
+      <div class="start__menu--lists">
+        <div class="start__menu--lists--folder select">Folder 1</div>
+        <div class="start__menu--lists--folder select">Folder 2</div>
+      </div>
+    </section>
+
+    <!-- Right Click -->
+
+    <section>
+      <div class="rightClick hidden">
+        <span class="rightClick--span refresh">Refresh</span>
+        <span><hr class="rightClick--span--line" /></span>
+        <span class="rightClick--span rightClick--span--new"
+          >New
+          <img
+            class="rightClick--span--arrow"
+            src="icons/right-arrow.svg"
+            alt="Right Arrow"
+          />
+          <!-- Right Click New Popup -->
+          <div class="rightClick--new">
+            <div class="rightClick--new--popup rcNewFolder">
+              <img
+                class="rightClick--new--popup--icon"
+                src="icons/folder.svg"
+                alt=""
+              />
+              <span>Folder</span>
+            </div>
+            <div class="rightClick--new--popup">
+              <img
+                class="rightClick--new--popup--icon"
+                src="icons/document.svg"
+                alt=""
+              />
+              <span>Text Document</span>
+            </div>
+          </div>
+        </span>
+
+        <span class="rightClick--span">Personalize</span>
+      </div>
+    </section>
+
+    <section>
+      <div class="folderRightClick">
+        <span class="folderRightClick--span">Open</span>
+        <span class="folderRightClick--line"><hr class="line-style" /></span>
+        <span class="folderRightClick--span">Pin to Start</span>
+        <span class="folderRightClick--line"><hr class="line-style" /></span>
+        <span class="folderRightClick--span">Cut</span>
+        <span class="folderRightClick--span">Copy</span>
+        <span class="folderRightClick--span delete">Delete</span>
+        <span class="folderRightClick--span rename">Rename</span>
+        <span class="folderRightClick--line"><hr class="line-style" /></span>
+        <span class="folderRightClick--span">Properties</span>
+      </div>
+    </section>
+
+    <!-- File Explorer -->
+    <section>
+      <div class="fileExplorer">
+        <div class="nameNbuttons">
+          <div class="fileExplorer-name">Name</div>
+          <div class="fileExplorer-icons-container">
+            <div class="fileExplorer-icon">
+              <object
+                class="fileExplorer-icons"
+                data="icons/minus.svg"
+                type=""
+              ></object>
+            </div>
+            <div class="fileExplorer-icon">
+              <object
+                class="fileExplorer-icons"
+                data="icons/full-screen.svg"
+                type=""
+              ></object>
+            </div>
+            <div class="fileExplorer-icon hidden">
+              <object
+                class="fileExplorer-icons"
+                data="icons/make-little.svg"
+                type=""
+              ></object>
+            </div>
+            <div class="fileExplorer-icon x">
+              <object
+                class="fileExplorer-icons"
+                data="icons/close.svg"
+                type=""
+              ></object>
+            </div>
+          </div>
+        </div>
+        <div class="navigationPane"></div>
+        <div class="folder-files">
+          <div>Box</div>
+          <div>Box 1</div>
+          <div>Box 2</div>
+          <div>Box 3</div>
+          <div>Box 4</div>
+          <div>Box 5</div>
+          <div>Box 6</div>
+        </div>
+      </div>
+    </section>
+
+    <script src="javascript/javascript.js"></script>
+  </body>
+</html>
