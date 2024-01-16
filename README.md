@@ -13,9 +13,12 @@
  
  <hr>
  
-**The content of the right button has been changed:**
-The right button on the desktop or the folder was changed, two different menus were made.
+**Added Features**
+- The right button on the desktop or the folder was changed, two different menus were made.
 Prevented right button from sticking out.
+- Added that each folder created will be created with a different name (eg: "New Folder (2)", "New Folder (3)")
+
+
 
 <hr>
 
