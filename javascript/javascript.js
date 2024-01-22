@@ -303,6 +303,7 @@ desktop.addEventListener("mousemove", function (e) {
 
     movinG.style.gridRow = fy;
     movinG.style.gridColumn = fx;
+    // movinG.style.zIndex = "1";
   }
 });
 
@@ -377,3 +378,28 @@ const start = document.querySelector(".start");
 openStartMenu.addEventListener("click", () => {
   start.classList.toggle("hidden");
 });
+
+//////////////////////////////////////////
+
+function updateClock() {
+  let now = new Date();
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  let seconds = now.getSeconds();
+  let day = now.getDate();
+  let month = now.getMonth() + 1;
+  let year = now.getFullYear();
+
+  hours = hours < 10 ? "0" + hours : hours;
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  seconds = seconds < 10 ? "0" + seconds : seconds;
+
+  let timeString = hours + ":" + minutes + ":" + seconds;
+  let dateString = day + "/" + month + "/" + year;
+
+  document.querySelector(".clock").innerHTML = timeString;
+  document.querySelector(".date").innerHTML = dateString;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
