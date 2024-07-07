@@ -329,7 +329,7 @@ document.addEventListener("mouseup", function (e) {
   });
 });
 
-desktop.addEventListener("mousedown", function (e) {
+desktop.addEventListener("mouseup", function (e) {
   isDragging = false;
   isDown = false;
     });
