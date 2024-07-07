@@ -308,6 +308,7 @@ desktop.addEventListener("mousemove", function (e) {
 });
 
 desktop.addEventListener("mousedown", function (e) {
+   e.preventDefault();
   if (e.target.closest(".box")) {
     boxes.forEach((box) => {
       box.classList.remove("specified");
@@ -343,6 +344,7 @@ let y1;
 let isDragging = false;
 
 nameNbuttons.addEventListener("mousedown", function (e) {
+  e.preventDefault();
   isDragging = true;
   x1 = e.offsetX;
   y1 = e.offsetY;
