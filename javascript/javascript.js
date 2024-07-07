@@ -216,8 +216,6 @@ function addNewName(arr, name) {
 }
 
 let changingArea = function (e) {
-  // console.log(folderX);
-  // console.log(document.querySelector(".selected"));
   document.querySelector(".selected").style.gridColumn = Math.floor(folderX);
   document.querySelector(".selected").style.gridRow = Math.floor(folderY);
 };
@@ -290,7 +288,7 @@ deleteFolder.addEventListener("click", function (e) {
   folderRC.style.display = "none";
 });
 
-////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
 desktop.addEventListener("mousemove", function (e) {
   e.preventDefault();
 
@@ -315,10 +313,7 @@ desktop.addEventListener("mousedown", function (e) {
       box.classList.remove("selected");
     });
 
-    // if (selectedBox) {
-    //   selectedBox[0].classList.remove("hidden");
-    //   selectedBox[1].classList.add("hidden");
-    // }
+ 
 
     isDown = true;
     e.target.closest(".box").classList.add("moving");
@@ -327,6 +322,7 @@ desktop.addEventListener("mousedown", function (e) {
 });
 
 document.addEventListener("mouseup", function (e) {
+  isDragging = false;
   isDown = false;
   boxes.forEach((box) => {
     box.classList.remove("moving");
@@ -369,7 +365,7 @@ boxes.forEach((box) => {
   NavigantionPane.appendChild(explorerNameArea);
 });
 
-console.log(boxNames2);
+
 
 /////////////////////////////////////////
 //            Start Menu               //
