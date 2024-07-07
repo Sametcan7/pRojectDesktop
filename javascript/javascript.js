@@ -329,6 +329,11 @@ document.addEventListener("mouseup", function (e) {
   });
 });
 
+desktop.addEventListener("mousedown", function (e) {
+  isDragging = false;
+  isDown = false;
+    });
+
 //////////////////////////////////////
 //////////// File Explorer ///////////
 //////////////////////////////////////
